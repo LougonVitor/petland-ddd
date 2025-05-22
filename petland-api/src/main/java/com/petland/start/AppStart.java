@@ -16,8 +16,8 @@ public class AppStart implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         Register vitor = new Register();
-        //vitor.setId(1);
-        //vitor.setName("test");
+        vitor.setId(1);
+        vitor.setName("test");
         registerRepository.save(vitor);
     }
 }
