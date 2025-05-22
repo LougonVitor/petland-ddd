@@ -1,5 +1,7 @@
 package com.petland.start;
 
+import com.petland.model.Address;
+import com.petland.model.Profile;
 import com.petland.model.Register;
 import com.petland.repository.IRegisterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +18,18 @@ public class AppStart implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         Register vitor = new Register();
-        vitor.setId(1);
         vitor.setName("test");
+
+        Profile profile = new Profile();
+        profile.setCustomer(true);
+
+        Address address = new Address();
+        address.setPublicPlace("Antonio Secatti");
+        address.setNumber("136b");
+
+        vitor.setProfile(profile);
+        vitor.setAddress(address);
+
         registerRepository.save(vitor);
     }
 }
