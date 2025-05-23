@@ -32,7 +32,7 @@ public class CustomerService {
         return response;
     }
 
-    public Integer record(CustomerRequestDto request) {
+    public Integer save(CustomerRequestDto request) {
         RegisterEntity entity = new RegisterEntity();
         BeanUtils.copyProperties(request, entity);
         return this.registerRepository.save(entity).getId();

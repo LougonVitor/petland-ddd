@@ -33,7 +33,7 @@ public class AnimalService {
         return response;
     }
 
-    public Integer record(AnimalRequestDto request) {
+    public Integer save(AnimalRequestDto request) {
         AnimalEntity entity = new AnimalEntity();
         BeanUtils.copyProperties(request, entity);
         return this.animalRepository.save(entity).getId();

@@ -27,7 +27,7 @@ public class ProductServiceController {
     }
 
     @PostMapping()
-    public Integer record(@RequestBody ProductService request) {
+    public Integer save(@RequestBody ProductService request) {
         this.productServiceRepository.save(request);
         return request.getId();
     }
@@ -39,7 +39,7 @@ public class ProductServiceController {
     }
 
     @DeleteMapping("/{id}")
-    public void update(@PathVariable ("id") Integer id) {
+    public void delete(@PathVariable ("id") Integer id) {
         this.productServiceRepository.deleteById(id);
     }
 }

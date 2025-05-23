@@ -29,8 +29,8 @@ public class CustomerController {
     }
 
     @PostMapping()
-    public Integer record(@RequestBody CustomerRequestDto request) {
-        return this.customerService.record(request);
+    public Integer save(@RequestBody CustomerRequestDto request) {
+        return this.customerService.save(request);
     }
 
     @PutMapping("/{id}")
@@ -39,7 +39,7 @@ public class CustomerController {
     }
 
     @DeleteMapping("/{id}")
-    public void update(@PathVariable ("id") Integer id) {
+    public void delete(@PathVariable ("id") Integer id) {
         this.customerService.delete(id);
     }
 }
