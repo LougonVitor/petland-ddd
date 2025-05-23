@@ -1,9 +1,10 @@
-package com.petland.model;
+package com.petland.model.entity;
 
 import java.time.LocalDate;
 
+import com.petland.model.AnimalSpecies;
+
 import jakarta.persistence.Column;
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -18,7 +19,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "animal")
 @Data
-public class Animal {
+public class AnimalEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter(AccessLevel.NONE)
