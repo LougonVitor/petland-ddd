@@ -9,8 +9,6 @@ import org.springframework.stereotype.Service;
 
 import com.petland.repository.IAnimalRepository;
 
-import ch.qos.logback.core.joran.util.beans.BeanUtil;
-
 import com.petland.model.dto.AnimalRequestDto;
 import com.petland.model.dto.AnimalResponseDto;
 import com.petland.model.entity.AnimalEntity;

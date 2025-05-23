@@ -1,7 +1,8 @@
 package com.petland.repository;
 
-import com.petland.model.Register;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface IRegisterRepository extends JpaRepository<Register, Integer> {
+import com.petland.model.entity.RegisterEntity;
+
+public interface IRegisterRepository extends JpaRepository<RegisterEntity, Integer> {
 }

@@ -1,4 +1,7 @@
-package com.petland.model;
+package com.petland.model.entity;
+
+import com.petland.model.Address;
+import com.petland.model.Profile;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
@@ -14,7 +17,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "register")
 @Data
-public class Register {
+public class RegisterEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter(AccessLevel.NONE)
