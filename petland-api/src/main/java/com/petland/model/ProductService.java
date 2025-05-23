@@ -7,10 +7,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
+import lombok.Data;
 import lombok.Setter;
 
 @Entity
 @Table(name = "product_service")
+@Data
 public class ProductService {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
