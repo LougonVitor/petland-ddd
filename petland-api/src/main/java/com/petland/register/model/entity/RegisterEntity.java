@@ -1,7 +1,7 @@
-package com.petland.model.entity;
+package com.petland.register.model.entity;
 
-import com.petland.model.Address;
-import com.petland.model.Profile;
+import com.petland.register.model.Address;
+import com.petland.register.model.Profile;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;

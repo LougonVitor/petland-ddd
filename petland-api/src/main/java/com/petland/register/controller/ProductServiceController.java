@@ -1,4 +1,4 @@
-package com.petland.controller;
+package com.petland.register.controller;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.petland.repository.IProductServiceRepository;
-import com.petland.model.ProductService;;
+import com.petland.register.repository.IProductServiceRepository;
+import com.petland.register.model.ProductService;;
 
 @RestController
 @RequestMapping("/products")

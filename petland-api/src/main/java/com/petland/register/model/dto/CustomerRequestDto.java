@@ -1,7 +1,7 @@
-package com.petland.model.dto;
+package com.petland.register.model.dto;
 
-import com.petland.model.Address;
-import com.petland.model.Profile;
+import com.petland.register.model.Address;
+import com.petland.register.model.Profile;
 
 import lombok.Data;
 

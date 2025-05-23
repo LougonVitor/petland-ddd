@@ -1,4 +1,4 @@
-package com.petland.service;
+package com.petland.register.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,10 +7,10 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.petland.model.dto.CustomerRequestDto;
-import com.petland.model.dto.CustomerResponseDto;
-import com.petland.model.entity.RegisterEntity;
-import com.petland.repository.IRegisterRepository;
+import com.petland.register.model.dto.CustomerRequestDto;
+import com.petland.register.model.dto.CustomerResponseDto;
+import com.petland.register.model.entity.RegisterEntity;
+import com.petland.register.repository.IRegisterRepository;
 
 @Service
 public class CustomerService {

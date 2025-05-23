@@ -1,4 +1,4 @@
-package com.petland.model;
+package com.petland.register.model;
 
 public enum AnimalSpecies {
     CAT,

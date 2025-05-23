@@ -11,4 +11,5 @@ public class AnimalRequestDto {
     private String name;
     private LocalDate birthday;
     private AnimalSpecies specie;
+    private Integer tutor;
 }

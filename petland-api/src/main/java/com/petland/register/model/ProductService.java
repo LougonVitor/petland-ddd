@@ -1,13 +1,7 @@
-package com.petland.model.entity;
-
-import java.time.LocalDate;
-
-import com.petland.model.AnimalSpecies;
+package com.petland.register.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -17,17 +11,15 @@ import lombok.Data;
 import lombok.Setter;
 
 @Entity
-@Table(name = "animal")
+@Table(name = "product_service")
 @Data
-public class AnimalEntity {
+public class ProductService {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Setter(AccessLevel.NONE)
+    @Setter(AccessLevel.NONE) 
     private Integer id;
     @Column(length = 50, nullable = false)
     private String name;
-    private LocalDate birthday;
-
-    @Enumerated(EnumType.STRING)
-    private AnimalSpecies specie;
+    private Double value;
+    private boolean service;
 }

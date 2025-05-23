@@ -1,4 +1,4 @@
-package com.petland.controller;
+package com.petland.register.controller;
 
 import java.util.List;
 
@@ -12,34 +12,34 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.petland.model.dto.AnimalRequestDto;
-import com.petland.model.dto.AnimalResponseDto;
-import com.petland.service.AnimalService;
+import com.petland.register.model.dto.CustomerRequestDto;
+import com.petland.register.model.dto.CustomerResponseDto;
+import com.petland.register.service.CustomerService;
 
 @RestController
-@RequestMapping("/animals")
-public class AnimalController {
-
+@RequestMapping("/customer")
+public class CustomerController {
+    
     @Autowired
-    private AnimalService animalService;
+    private CustomerService customerService;
 
     @GetMapping()
-    public List<AnimalResponseDto> toList() {
-        return this.animalService.toList();
+    public List<CustomerResponseDto> toList() {
+        return this.customerService.toList();
     }
 
     @PostMapping()
-    public Integer record(@RequestBody AnimalRequestDto request) {
-        return this.animalService.record(request);
+    public Integer record(@RequestBody CustomerRequestDto request) {
+        return this.customerService.record(request);
     }
 
     @PutMapping("/{id}")
-    public Integer update(@PathVariable ("id") Integer id, @RequestBody AnimalRequestDto request) {
-        return this.animalService.update(id, request);
+    public Integer update(@PathVariable ("id") Integer id, @RequestBody CustomerRequestDto request) {
+        return this.customerService.update(id, request);
     }
 
     @DeleteMapping("/{id}")
     public void update(@PathVariable ("id") Integer id) {
-        this.animalService.delete(id);
+        this.customerService.delete(id);
     }
 }

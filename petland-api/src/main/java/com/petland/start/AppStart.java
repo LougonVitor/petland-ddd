@@ -1,9 +1,9 @@
 package com.petland.start;
 
-import com.petland.model.Address;
-import com.petland.model.Profile;
-import com.petland.model.entity.RegisterEntity;
-import com.petland.repository.IRegisterRepository;
+import com.petland.register.model.Address;
+import com.petland.register.model.Profile;
+import com.petland.register.model.entity.RegisterEntity;
+import com.petland.register.repository.IRegisterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
