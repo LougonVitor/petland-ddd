@@ -16,6 +16,9 @@ Project developed in Java for managing a pet shop, applying SOLID principles and
 
 1. The PostgresSQL database is in a docker container.
 2. A request is sent by Postman or any other api platform.
+3. The endpoint will follow this pattern: localhost:8080/[domainName{animals or register}] -> the method will decide which action will be taken, whether it is POST, DELETE, GET or PUT.
+4. The system will perform the validations.
+5. Then save it to the database.
  
 ## ⚙️ Configuration
 
