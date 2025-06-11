@@ -3,14 +3,14 @@ Project developed in Java for managing a pet shop, applying SOLID principles and
 
 ## 🚀 Technologies Used
 
-- **Java**
-- **DDD**
-- **SOLID**
-- **Docker**
-- **Spring Boot**
-- **Spring JPA**
-- **PostgreSQL**
-- **Clean Architecture**
+- **Java** ☕
+- **DDD** 🧠
+- **SOLID** 🏗️
+- **Docker** 🐳
+- **Spring Boot** 🌱
+- **Spring JPA** 📊
+- **PostgreSQL** 🐘
+- **Clean Architecture** 🧼🏛️
 
 ## 🔧 How It Works
 
