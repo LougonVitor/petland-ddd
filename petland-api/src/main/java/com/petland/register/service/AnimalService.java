@@ -3,6 +3,7 @@ package com.petland.register.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.petland.register.exception.AnimalNotFoundException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,21 +41,15 @@ public class AnimalService {
     }
 
     public Integer update(Integer id, AnimalRequestDto request) {
-        AnimalEntity entityDb = this.animalRepository.findById(id).orElse(null);
+        AnimalEntity entityDb = this.animalRepository.findById(id).orElseThrow(() -> new AnimalNotFoundException("Animal with ID " + id + " not found to update."));
 
-        if(entityDb != null) {
-            BeanUtils.copyProperties(request, entityDb);
-            return this.animalRepository.save(entityDb).getId();
-        }
-
-        return null;
+        BeanUtils.copyProperties(request, entityDb);
+        return this.animalRepository.save(entityDb).getId();
     }
 
     public void delete(Integer id) {
-        AnimalEntity entityDb = this.animalRepository.findById(id).orElse(null);
+        AnimalEntity entityDb = this.animalRepository.findById(id).orElseThrow(() -> new AnimalNotFoundException("Animal with ID " + id + " not found to delete"));
 
-        if(entityDb != null) {
-            this.animalRepository.delete(entityDb);
-        }
+        this.animalRepository.delete(entityDb);
     }
 }
