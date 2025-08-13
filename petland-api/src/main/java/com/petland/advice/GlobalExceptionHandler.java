@@ -14,4 +14,11 @@ public class GlobalExceptionHandler {
         System.err.println("Error: Animal not found - " + ex.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
     }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<String> handleGenericException(Exception ex) {
+        System.err.println("An unexpected error occurred: " + ex.getMessage());
+        ex.printStackTrace();
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An internal server error occurred");
+    }
 }

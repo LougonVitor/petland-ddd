@@ -2,8 +2,10 @@ package com.petland.register.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.petland.register.exception.AnimalNotFoundException;
+import com.petland.register.mapper.AnimalMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,23 +22,13 @@ public class AnimalService {
     private IAnimalRepository animalRepository;
 
     public List<AnimalResponseDto> toList() {
-        List<AnimalEntity> entities = this.animalRepository.findAll();
-        List<AnimalResponseDto> response = new ArrayList<>();
-
-        for(AnimalEntity e: entities) {
-            AnimalResponseDto res = new AnimalResponseDto();
-            
-            BeanUtils.copyProperties(e, res);
-
-            response.add(res);
-        }
-
-        return response;
+        return this.animalRepository.findAll().stream()
+                .map(AnimalMapper::toDto)
+                .collect(Collectors.toList());
     }
 
     public Integer save(AnimalRequestDto request) {
-        AnimalEntity entity = new AnimalEntity();
-        BeanUtils.copyProperties(request, entity);
+        AnimalEntity entity = AnimalMapper.toEntity(request);
         return this.animalRepository.save(entity).getId();
     }
 
