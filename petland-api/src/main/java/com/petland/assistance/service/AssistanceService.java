@@ -1,5 +1,6 @@
 package com.petland.assistance.service;
 
+import com.petland.assistance.mapper.AssistanceMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,8 +16,7 @@ public class AssistanceService {
     private IAssistanceRepository assistanceRepository;
         
     public Integer save(AssistanceRequestDto request) {
-        AssistanceEntity entity = new AssistanceEntity();
-        BeanUtils.copyProperties(request, entity);
+        AssistanceEntity entity = AssistanceMapper.toEntity(request);
         return this.assistanceRepository.save(entity).getId();
     }
 }
