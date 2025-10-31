@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4db8eee6-d25f-4ee6-8e4a-31eb3e805fd1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/assistance/repository/IAssistanceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/assistance/repository/IAssistanceRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/assistance/service/AssistanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/assistance/service/AssistanceService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

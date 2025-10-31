@@ -16,7 +16,11 @@ public class AssistanceService {
     private IAssistanceRepository assistanceRepository;
         
     public Integer save(AssistanceRequestDto request) {
-        AssistanceEntity entity = AssistanceMapper.toEntity(request);
-        return this.assistanceRepository.save(entity).getId();
+        if (!this.assistanceRepository.existsByDescriptionAndType(request.getDescription(), request.getType())) {
+            AssistanceEntity entity = AssistanceMapper.toEntity(request);
+            return this.assistanceRepository.save(entity).getId();
+        } else {
+            throw new RuntimeException();
+        }
     }
 }
