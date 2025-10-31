@@ -9,5 +9,5 @@ import java.util.Optional;
 
 public interface IAssistanceRepository extends JpaRepository<AssistanceEntity, Integer>{
     boolean existsByDescriptionAndType(String description, AssistanceType type);
-    Optional<AssistanceEntity> findByDescriptionAndType(String description, AssistanceType type);
+    AssistanceEntity findByDescriptionAndType(String description, AssistanceType type);
 }
