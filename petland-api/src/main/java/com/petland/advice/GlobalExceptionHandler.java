@@ -1,5 +1,6 @@
 package com.petland.advice;
 
+import com.petland.assistance.exception.AssistanceAlreadyExistsException;
 import com.petland.register.exception.*;
 
 import org.springframework.http.HttpStatus;
@@ -19,6 +20,12 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleAnimalSpeciesNotFound(AnimalSpeciesNotFoundException ex) {
         System.err.println("Error: Animal species not found - " + ex.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(AssistanceAlreadyExistsException.class)
+    public ResponseEntity<String> handleAssistanceAlreadyExists(AssistanceAlreadyExistsException ex) {
+        System.err.println("Error: Assistance already exists in the database - " + ex.getMessage());
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(ex.getMessage());
     }
 
     @ExceptionHandler(Exception.class)
