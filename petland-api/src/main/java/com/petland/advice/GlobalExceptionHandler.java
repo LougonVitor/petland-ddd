@@ -28,6 +28,12 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(ex.getMessage());
     }
 
+    @ExceptionHandler(AnimalAlreadyExistsException.class)
+    public ResponseEntity<String> handleAnimalAlreadyExists(AnimalAlreadyExistsException ex) {
+        System.err.println("Error: Animal already exists in the database - " + ex.getMessage());
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(ex.getMessage());
+    }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleGenericException(Exception ex) {
         System.err.println("An unexpected error occurred: " + ex.getMessage());

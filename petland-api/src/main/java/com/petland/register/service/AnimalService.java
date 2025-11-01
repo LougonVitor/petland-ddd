@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.petland.register.exception.AnimalAlreadyExistsException;
 import com.petland.register.exception.AnimalNotFoundException;
 import com.petland.register.mapper.AnimalMapper;
 import org.springframework.beans.BeanUtils;
@@ -28,8 +29,14 @@ public class AnimalService {
     }
 
     public Integer save(AnimalRequestDto request) {
-        AnimalEntity entity = AnimalMapper.toEntity(request);
-        return this.animalRepository.save(entity).getId();
+        AnimalEntity entityDb = this.animalRepository.findByNameAndSpecie(request.getName(), request.getSpecie());
+
+        if(entityDb != null) {
+            throw new AnimalAlreadyExistsException("The animal " + request.getName() + " already exists, ID: " + entityDb.getId());
+        } else {
+            AnimalEntity entity = AnimalMapper.toEntity(request);
+            return this.animalRepository.save(entity).getId();
+        }
     }
 
     public Integer update(Integer id, AnimalRequestDto request) {
