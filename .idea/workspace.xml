@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4db8eee6-d25f-4ee6-8e4a-31eb3e805fd1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/advice/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/advice/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/register/service/AnimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/register/service/AnimalService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Exception" />
+        <option value="Class" />
       </list>
     </option>
   </component>
