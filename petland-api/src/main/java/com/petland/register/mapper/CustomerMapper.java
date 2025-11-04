@@ -24,4 +24,12 @@ public class CustomerMapper {
 
         return dto;
     }
+
+    static public RegisterEntity updateEntity(CustomerRequestDto request, RegisterEntity entityDb) {
+        entityDb.setName(request.getName());
+        entityDb.setAddress(request.getAddress());
+        entityDb.setProfile(request.getProfile());
+
+        return entityDb;
+    }
 }

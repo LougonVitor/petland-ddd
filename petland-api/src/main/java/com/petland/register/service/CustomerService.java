@@ -32,8 +32,7 @@ public class CustomerService {
     }
 
     public Integer save(CustomerRequestDto request) {
-        RegisterEntity entity = new RegisterEntity();
-        BeanUtils.copyProperties(request, entity);
+        RegisterEntity entity = CustomerMapper.toEntity(request);
         return this.registerRepository.save(entity).getId();
     }
 
@@ -41,8 +40,7 @@ public class CustomerService {
         RegisterEntity entityDb = this.registerRepository.findById(id).orElse(null);
 
         if(entityDb != null) {
-            BeanUtils.copyProperties(request, entityDb);
-            return this.registerRepository.save(entityDb).getId();
+            return this.registerRepository.save(CustomerMapper.updateEntity(request, entityDb)).getId();
         }
 
         return null;
