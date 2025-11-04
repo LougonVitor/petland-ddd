@@ -17,7 +17,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "register")
 @Data
-public class RegisterEntity {
+public class CustomerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter(AccessLevel.NONE)

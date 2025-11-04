@@ -2,11 +2,11 @@ package com.petland.register.mapper;
 
 import com.petland.register.model.dto.CustomerRequestDto;
 import com.petland.register.model.dto.CustomerResponseDto;
-import com.petland.register.model.entity.RegisterEntity;
+import com.petland.register.model.entity.CustomerEntity;
 
 public class CustomerMapper {
-    static public RegisterEntity toEntity(CustomerRequestDto requestDto) {
-        RegisterEntity entity = new RegisterEntity();
+    static public CustomerEntity toEntity(CustomerRequestDto requestDto) {
+        CustomerEntity entity = new CustomerEntity();
 
         entity.setName(requestDto.getName());
         entity.setAddress(requestDto.getAddress());
@@ -15,7 +15,7 @@ public class CustomerMapper {
         return entity;
     }
 
-    static public CustomerResponseDto toDto(RegisterEntity entity) {
+    static public CustomerResponseDto toDto(CustomerEntity entity) {
         CustomerResponseDto dto = new CustomerResponseDto();
 
         dto.setName(entity.getName());
@@ -25,7 +25,7 @@ public class CustomerMapper {
         return dto;
     }
 
-    static public RegisterEntity updateEntity(CustomerRequestDto request, RegisterEntity entityDb) {
+    static public CustomerEntity updateEntity(CustomerRequestDto request, CustomerEntity entityDb) {
         entityDb.setName(request.getName());
         entityDb.setAddress(request.getAddress());
         entityDb.setProfile(request.getProfile());

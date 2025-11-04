@@ -4,13 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.petland.register.mapper.CustomerMapper;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.petland.register.model.dto.CustomerRequestDto;
 import com.petland.register.model.dto.CustomerResponseDto;
-import com.petland.register.model.entity.RegisterEntity;
+import com.petland.register.model.entity.CustomerEntity;
 import com.petland.register.repository.IRegisterRepository;
 
 @Service
@@ -19,10 +18,10 @@ public class CustomerService {
     private IRegisterRepository registerRepository;
 
     public List<CustomerResponseDto> toList() {
-        List<RegisterEntity> entities = this.registerRepository.findAll();
+        List<CustomerEntity> entities = this.registerRepository.findAll();
         List<CustomerResponseDto> response = new ArrayList<>();
 
-        for(RegisterEntity e: entities) {
+        for(CustomerEntity e: entities) {
             CustomerResponseDto res = CustomerMapper.toDto(e);
 
             response.add(res);
@@ -32,12 +31,12 @@ public class CustomerService {
     }
 
     public Integer save(CustomerRequestDto request) {
-        RegisterEntity entity = CustomerMapper.toEntity(request);
+        CustomerEntity entity = CustomerMapper.toEntity(request);
         return this.registerRepository.save(entity).getId();
     }
 
     public Integer update(Integer id, CustomerRequestDto request) {
-        RegisterEntity entityDb = this.registerRepository.findById(id).orElse(null);
+        CustomerEntity entityDb = this.registerRepository.findById(id).orElse(null);
 
         if(entityDb != null) {
             return this.registerRepository.save(CustomerMapper.updateEntity(request, entityDb)).getId();
@@ -47,7 +46,7 @@ public class CustomerService {
     }
 
     public void delete(Integer id) {
-        RegisterEntity entityDb = this.registerRepository.findById(id).orElse(null);
+        CustomerEntity entityDb = this.registerRepository.findById(id).orElse(null);
 
         if(entityDb != null) {
             this.registerRepository.delete(entityDb);

@@ -2,7 +2,7 @@ package com.petland.start;
 
 import com.petland.register.model.Address;
 import com.petland.register.model.Profile;
-import com.petland.register.model.entity.RegisterEntity;
+import com.petland.register.model.entity.CustomerEntity;
 import com.petland.register.repository.IRegisterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -17,7 +17,7 @@ public class AppStart implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        RegisterEntity vitor = new RegisterEntity();
+        CustomerEntity vitor = new CustomerEntity();
         vitor.setName("test");
 
         Profile profile = new Profile();
