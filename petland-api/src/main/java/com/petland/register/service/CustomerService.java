@@ -3,6 +3,7 @@ package com.petland.register.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.petland.register.mapper.CustomerMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,9 +23,7 @@ public class CustomerService {
         List<CustomerResponseDto> response = new ArrayList<>();
 
         for(RegisterEntity e: entities) {
-            CustomerResponseDto res = new CustomerResponseDto();
-            
-            BeanUtils.copyProperties(e, res);
+            CustomerResponseDto res = CustomerMapper.toDto(e);
 
             response.add(res);
         }

@@ -5,7 +5,7 @@ import com.petland.register.model.dto.CustomerResponseDto;
 import com.petland.register.model.entity.RegisterEntity;
 
 public class CustomerMapper {
-    static RegisterEntity toEntity(CustomerRequestDto requestDto) {
+    static public RegisterEntity toEntity(CustomerRequestDto requestDto) {
         RegisterEntity entity = new RegisterEntity();
 
         entity.setName(requestDto.getName());
@@ -15,7 +15,7 @@ public class CustomerMapper {
         return entity;
     }
 
-    static CustomerResponseDto toDto(RegisterEntity entity) {
+    static public CustomerResponseDto toDto(RegisterEntity entity) {
         CustomerResponseDto dto = new CustomerResponseDto();
 
         dto.setName(entity.getName());
