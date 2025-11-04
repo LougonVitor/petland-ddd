@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4db8eee6-d25f-4ee6-8e4a-31eb3e805fd1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/register/mapper/CustomerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/register/mapper/CustomerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/register/model/entity/RegisterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/register/model/entity/CustomerEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/register/repository/IRegisterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/register/repository/IRegisterRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/register/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/register/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/start/AppStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/start/AppStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/register/mapper/AnimalMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/register/mapper/AnimalMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/register/service/AnimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/petland-api/src/main/java/com/petland/register/service/AnimalService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -42,8 +42,7 @@ public class AnimalService {
     public Integer update(Integer id, AnimalRequestDto request) {
         AnimalEntity entityDb = this.animalRepository.findById(id).orElseThrow(() -> new AnimalNotFoundException("Animal with ID " + id + " not found to update."));
 
-        BeanUtils.copyProperties(request, entityDb);
-        return this.animalRepository.save(entityDb).getId();
+        return this.animalRepository.save(AnimalMapper.updateAnimal(request, entityDb)).getId();
     }
 
     public void delete(Integer id) {

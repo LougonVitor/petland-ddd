@@ -25,4 +25,13 @@ public class AnimalMapper {
 
         return entity;
     }
+
+    public static AnimalEntity updateAnimal(AnimalRequestDto request, AnimalEntity entity) {
+        entity.setName(request.getName());
+        entity.setBirthday(request.getBirthday());
+        entity.setSpecie(request.getSpecie());
+        entity.setTutor(request.getTutor());
+
+        return entity;
+    }
 }
